@@ -166,3 +166,89 @@ if (guess === results) {
 }
 
 */
+
+// lesson 7 
+/*
+
+function function1() {
+
+    console.log(`hello`);
+    console.log( 10 + 2 );
+
+}
+
+function1();
+
+
+
+function pickComputerMove() {
+
+let computerMove = ``;
+
+const randomNumber = Math.random();
+
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+   computerMove = `rock`;
+  } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+   computerMove = `paper`;
+  } else if (randomNumber >= 2/3 && randomNumber < 1) {
+   computerMove = `scissors`;
+  }
+
+  return computerMove;
+}
+
+function playGame(playerMove) {
+    const computerMove = pickComputerMove();
+
+  let result = ``;
+
+    // if the player chooses rock then this applies.
+if (playerMove === `rock`) {
+  if (computerMove === `rock`) {
+    result = `tie`;
+  } else if (computerMove === `paper`) {
+    result = `you lose`;
+  } else if (computerMove === `scissors`) {
+    result = `you win`;
+  }
+
+  // if the player chooses paper then this applies.
+} else if (playerMove === `paper`) {
+
+  if (computerMove === `rock`) {
+    result = `you win`;
+  } else if (computerMove === `paper`) {
+    result = `tie.`;
+  } else if (computerMove === `scissors`) {
+    result = `you win`;
+  }
+
+    //if the player chooses scissors then this applies.
+} else if (playerMove === `scissors`) {
+    if (computerMove === `rock`) {
+    result = `you lose`;
+  } else if (computerMove === `paper`) {
+    result = `you win.`;
+  } else if (computerMove === `scissors`) {
+    result = `tie`;
+  }
+}
+
+  alert(`you picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+}
+
+
+
+
+function calculateTax(cost, taxPercent = 0.1) {
+
+    console.log(cost * taxPercent);
+
+}
+
+calculateTax(2000, 0.2);
+calculateTax(5000);
+*/
+
+// lesson 8
