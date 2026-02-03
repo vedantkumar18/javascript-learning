@@ -168,8 +168,8 @@ if (guess === results) {
 */
 
 // lesson 7 
-/*
 
+/*
 function function1() {
 
     console.log(`hello`);
@@ -179,7 +179,15 @@ function function1() {
 
 function1();
 
+let score = JSON.parse(localStorage.getItem(`score`));
 
+if (score === null) {
+  score = {
+    wins: 0,
+    loses: 0,
+    tie: 0,
+  };
+}
 
 function pickComputerMove() {
 
@@ -205,42 +213,61 @@ function playGame(playerMove) {
 
     // if the player chooses rock then this applies.
 if (playerMove === `rock`) {
+
   if (computerMove === `rock`) {
-    result = `tie`;
+    result = `tie.`;
   } else if (computerMove === `paper`) {
-    result = `you lose`;
+    result = `you lose.`;
   } else if (computerMove === `scissors`) {
-    result = `you win`;
+    result = `you win.`;
   }
 
   // if the player chooses paper then this applies.
 } else if (playerMove === `paper`) {
 
   if (computerMove === `rock`) {
-    result = `you win`;
+    result = `you win.`;
   } else if (computerMove === `paper`) {
     result = `tie.`;
   } else if (computerMove === `scissors`) {
-    result = `you win`;
+    result = `you win.`;
   }
 
     //if the player chooses scissors then this applies.
 } else if (playerMove === `scissors`) {
-    if (computerMove === `rock`) {
-    result = `you lose`;
+
+  if (computerMove === `rock`) {
+    result = `you lose.`;
   } else if (computerMove === `paper`) {
     result = `you win.`;
   } else if (computerMove === `scissors`) {
-    result = `tie`;
+    result = `tie.`;
   }
 }
 
-  alert(`you picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+  if (result === `you win.`) {
+    score.wins += 1;
+  } else if (result === `you lose.`) {
+    score.loses += 1;
+  } else if (result === `tie.`) {
+    score.tie += 1;
+  }
+
+
+  localStorage.setItem(`score`, JSON.stringify(score));
+
+
+  alert(`you picked ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.tie}.  
+  `);
+
 }
 
 
 
+*/
 
+/*
 function calculateTax(cost, taxPercent = 0.1) {
 
     console.log(cost * taxPercent);
@@ -382,3 +409,60 @@ function removeCartQuantity(number) {
 }
   
 */
+
+// lesson 8
+
+
+/*
+
+const product = {
+  name: `ved`,
+  price: 20
+};
+
+console.log(product);
+console.log(product.name);
+console.log(product.price);
+
+product.name = `cotton socks`;
+console.log(product);
+
+product.newProperty = true;
+console.log(product);
+
+delete product.newProperty;
+console.log(product);
+
+*/
+
+/*
+const product2 = {
+  name: `shirt`,
+  "delivery-time": `1 day`,
+  rating: {
+    stars: 4.5,
+    count: 87,
+  },
+  fun: function function1() {
+    console.log(`function inside object`);
+  }
+}
+
+console.log(product2);
+console.log(product2.name);
+console.log(product2[`name`]);
+
+console.log(product2.rating.stars);
+console.log(product2.rating.count);
+console.log(product2["delivery-time"]);
+
+product2.fun();
+
+console.log(JSON.stringify(product2));
+
+const jsonString = JSON.stringify(product2);
+console.log(JSON.parse(jsonString));
+
+*/
+// local storage
+
