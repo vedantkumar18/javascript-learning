@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jsLearning.css">
+  <title>rock paper scissors</title>
+</head>
+<body>
+
+<p>Rock Paper Scissors</p>
+
+<button onclick="
+playGame(`rock`);">Rock</button>
+
+<button onclick="
+playGame(`paper`);">Paper</button>
+
+<button onclick="
+playGame(`scissors`);">Scissors</button>
+
+<button onclick="
+  score.wins = 0;
+  score.loses = 0;
+  score.tie = 0;
+  localStorage.removeItem(`score`);
+">Reset score</button>
+
+
+
+  <script src="jsLearning.js"></script>
+</body>
+</html>
