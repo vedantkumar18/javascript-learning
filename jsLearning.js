@@ -251,4 +251,134 @@ calculateTax(2000, 0.2);
 calculateTax(5000);
 */
 
-// lesson 8
+// lesson 7 exercise 
+/*
+function greet(name) {
+
+  if (name === undefined) {
+    console.log(`Hello User`);
+  } else {
+    console.log(`hello ${name}`);
+  }
+
+
+  }
+
+// greet(`ved~`);
+// greet();
+
+
+function convertToFarenheit(celsius) {
+
+  const fahrenheit = (celsius * 9/5) + 32;
+  console.log(fahrenheit + `F`);
+
+}
+
+// convertToFarenheit(25);
+
+function convertToCelsius(fahrenheit) {
+
+  const celsius = (fahrenheit - 32) * 5/9;
+  console.log(celsius + `C`);
+
+}
+
+// convertToCelsius(86);
+
+function convertTemperature(degrees, unit) {
+
+  if (unit === `F`) {
+    return (convertToCelsius(degrees));
+  } else if (unit === `C`) {
+    return(convertToFarenheit(degrees));
+  }
+
+
+}
+
+//  convertTemperature(86, `F`);
+//  convertTemperature(25, `C`);
+
+function convertLength(length, from, to) {
+
+  // ft or Ft means feet.
+
+
+let oneMile = 1.6;
+let oneMileToFt = 5280;
+let oneKmToFt = 3281;
+
+
+
+
+if (from !== `km` && from !== `mile` && from !== `ft`){
+  console.log(`invalid unit: ${from}`);
+} else if (to !== `km` && to !== `mile` && to !== `ft`){
+  console.log(`invalid unit: ${to}`);
+} else if (from === `km` && to === `km`) {
+  console.log(length + to);
+} else if (from === `mile` && to === `ft`) {
+  console.log(length * oneMileToFt + to);
+}else if(from === `km` && to === `ft`) {
+  console.log(length * oneKmToFt + to);
+} else if (from === `mile`) {
+  console.log(length * oneMile + to);
+} else if (from === `km`) {
+  console.log((length / oneMile) + to);
+}
+
+}
+
+// convertLength(50, `mile`, `km`);
+// convertLength(32, `km`, `miles`);
+// convertLength(50, `km`, `km`);
+// convertLength(5, `mile`, `km`);
+// convertLength(5, `mile`, `ft`);
+// convertLength(5, `km`, `ft`);
+// convertLength(5, `lbs`, `lbs`);
+
+
+*/
+
+// 07-copy-projects
+/*
+
+
+// 07-calculator-copy
+
+let calculation = ``;
+
+function updateCalculation(number) {
+  console.log(calculation += number);
+}
+
+
+// 07-cart quantity
+
+let cartQuantity = 0;
+
+function updateCartQuantity(number){
+
+    if (cartQuantity + number > 10) {
+      console.log(`the cart is full`);
+      return;
+    } else {
+      cartQuantity += number;
+    console.log(`cart Quantity: ${cartQuantity}`); 
+    }
+
+}
+
+function removeCartQuantity(number) {
+
+    if (cartQuantity < 0) {
+      console.log(`the cart is empty`);
+    } else {
+      cartQuantity -= number;
+    console.log(`cart Quantity: ${cartQuantity}`); 
+    }
+
+}
+  
+*/
