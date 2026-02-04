@@ -178,16 +178,47 @@ function function1() {
 }
 
 function1();
+*/
 
-let score = JSON.parse(localStorage.getItem(`score`));
 
-if (score === null) {
+
+
+
+
+
+
+
+/*
+
+let score = JSON.parse(localStorage.getItem(`score`)) || {
+    wins: 0,
+    loses: 0,
+    tie: 0,
+  };
+
+*/
+
+
+
+  /*
+if (!score) {
   score = {
     wins: 0,
     loses: 0,
     tie: 0,
   };
 }
+*/
+
+
+
+
+
+
+
+
+
+/*
 
 function pickComputerMove() {
 
@@ -262,8 +293,6 @@ Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.tie}.
   `);
 
 }
-
-
 
 */
 
@@ -463,6 +492,53 @@ console.log(JSON.stringify(product2));
 const jsonString = JSON.stringify(product2);
 console.log(JSON.parse(jsonString));
 
-*/
-// local storage
+console.log(`hello`.length);
+console.log(`hello`.toUpperCase());
 
+const object1 = {
+  message: `hello`
+};
+
+
+const object2 = object1;
+
+object1.message = `heyy`;
+console.log(object1);
+console.log(object2);
+
+
+const object3 = {
+  message: `good job!`
+}
+
+console.log(object3 === object1);
+console.log(object2 === object1);
+
+
+const object4 = {
+  message: `good job!`,
+  price: 799
+}
+
+// const message = object4.message;
+const {message, price} = object4;
+console.log(message);
+console.log(price);
+
+
+const object5 = {
+//  message: message,
+    message,
+    // method: function function4 () {
+    //  console.log(`method`);
+    // }
+    method() {
+      console.log(`method`);
+    }
+};
+
+console.log(object5);
+
+object5.method();
+
+*/
