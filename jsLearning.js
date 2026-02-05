@@ -188,19 +188,19 @@ function1();
 
 
 
-/*
 
+/*
 let score = JSON.parse(localStorage.getItem(`score`)) || {
     wins: 0,
     loses: 0,
     tie: 0,
   };
 
-*/
 
 
 
-  /*
+
+
 if (!score) {
   score = {
     wins: 0,
@@ -208,17 +208,11 @@ if (!score) {
     tie: 0,
   };
 }
-*/
 
 
 
 
 
-
-
-
-
-/*
 
 function pickComputerMove() {
 
@@ -293,8 +287,10 @@ Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.tie}.
   `);
 
 }
-
 */
+
+
+
 
 /*
 function calculateTax(cost, taxPercent = 0.1) {
@@ -398,19 +394,35 @@ if (from !== `km` && from !== `mile` && from !== `ft`){
 */
 
 // 07-copy-projects
-/*
+
 
 
 // 07-calculator-copy
+/*
 
-let calculation = ``;
+let calculation = localStorage.getItem(`calculation`) || ``;
+
+
+document.getElementById('display').innerText =
+  calculation || '(empty on load)';
 
 function updateCalculation(number) {
   console.log(calculation += number);
+  localStorage.setItem(`calculation`, calculation);
 }
+
+// 3. Function to calculate result
+function calculateResult() {
+  calculation = eval(calculation);       // evaluate expression
+  console.log(calculation);
+  localStorage.setItem('calculation', calculation); // save result
+}
+*/
 
 
 // 07-cart quantity
+/*
+
 
 let cartQuantity = 0;
 
@@ -542,3 +554,78 @@ console.log(object5);
 object5.method();
 
 */
+
+
+// lessson 8, exercises- 
+
+/*
+
+const item = {
+
+  name: `Basketball`,
+  price: 2095
+};
+
+console.log(item);
+
+item.price += 500;
+
+console.log(item);
+
+item[`delivery-time`] = `3 Days`;
+
+console.log(item)
+
+
+const product7 = {
+
+  name: `Ball`,
+  price: 2000
+
+};
+
+const product8 = {
+
+  name: `Ball`,
+  price: 1999
+
+};
+
+
+
+function comparePrice() {
+
+  
+
+  if (product7.price < product8.price) {
+    console.log(`product7: ${product7.price} is the cheapest option.`);
+  } else {
+    console.log(`product8: ${product8.price} is the cheapest option`);
+  }
+
+}
+
+
+comparePrice();
+
+
+function isSameProduct() {
+
+  if (product7.name === product8.name) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+
+};
+
+isSameProduct();
+
+
+const testString = `THIS IS A TEST STRING!!!!`;
+const testLowerCaseString = testString.toLowerCase();
+console.log(testLowerCaseString);
+
+const repeatString = `hello `;
+const testRepeatString = repeatString.repeat(5);
+console.log(testRepeatString);
