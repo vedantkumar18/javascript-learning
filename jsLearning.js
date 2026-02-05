@@ -630,3 +630,53 @@ const repeatString = `hello `;
 const testRepeatString = repeatString.repeat(5);
 console.log(testRepeatString);
 */
+
+
+// coin flip game
+/*
+function coinFlip () {
+
+const randomNumber = Math.random();
+const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+const guess = 'heads';
+console.log(guess === result ? 'You win!' : 'You lose!');
+
+}
+*/
+
+
+
+/*
+const score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  loses: 0
+};
+
+function playGame(guess) {
+  const randomNumber = Math.random();
+  const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+  let answer = '';
+
+  if (guess === result) {
+    answer = 'you win';
+    score.wins++;
+  } else {
+    answer = 'you lose';
+    score.loses++;
+  }
+
+  localStorage.setItem('score', JSON.stringify(score));
+
+  console.log(score);
+  console.log(answer);
+}
+*/
+
+
+
+
+
+
+// playGame(`head`);
