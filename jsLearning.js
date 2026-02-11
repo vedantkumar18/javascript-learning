@@ -196,23 +196,13 @@ let score = JSON.parse(localStorage.getItem(`score`)) || {
     tie: 0,
   };
 
-
-
-
-
-
 if (!score) {
-  score = {
-    wins: 0,
-    loses: 0,
-    tie: 0,
-  };
+  wins: 0;
+  loses: 0;
+  tie: 0;
 }
 
-
-
-
-
+updateScoreElement();
 
 function pickComputerMove() {
 
@@ -281,13 +271,29 @@ if (playerMove === `rock`) {
 
   localStorage.setItem(`score`, JSON.stringify(score));
 
+updateScoreElement();
 
-  alert(`you picked ${playerMove}. Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.tie}.  
-  `);
+
+document.querySelector(`.js-moves`).innerHTML = `
+you ${playerMove} - ${computerMove} computer`;
+
+document.querySelector(`.js-result`).innerHTML = result;
 
 }
+
+function updateScoreElement() {
+    document.querySelector(`.js-score`).innerHTML = 
+`Wins: ${score.wins}, loses: ${score.loses}, ties: ${score.tie}.`;
+}
 */
+
+
+
+
+
+
+
+
 
 
 
@@ -680,3 +686,62 @@ function playGame(guess) {
 
 
 // playGame(`head`);
+
+
+
+// lesson 9 
+
+/*
+document.body.innerHTML = `HELLO`;
+document.title = `Good job`;
+
+console.log(document.body);
+console.log(typeof document.body);
+
+document.body.innerHTML = `<button>Good job!</button>`;
+
+console.log(document.querySelector(`button`)
+  .innerHTML = `hey~`);
+
+const btnElem = document.querySelector(`.js-btn`);
+console.log(btnElem);
+*/
+
+/*
+function subscribeBtn() {
+
+  const buttonElement = document.querySelector(`.js-subscribe-btn`);
+
+  if (buttonElement.innerText === `Subscribe`) { 
+      buttonElement.innerText = `Subscribed`;
+  } else {
+      buttonElement.innerText = `Subscribe`;
+  }
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
