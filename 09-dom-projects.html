@@ -15,7 +15,19 @@
     " class="js-subscribe-btn">Subscribe</button>
 
 
-
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = + $10 shipping</p>
+    <p>orders over $40 = FREE shipping</p>
+    <input class="js-input-amount" placeholder="Cost of order" type="number" onkeydown="
+    console.log(event);
+    if (event.key === `Enter`) {
+      calculateTotal();
+    }
+    ">
+    <button onclick="
+    calculateTotal();
+    ">Calculate</button>
+    <p class="js-calculation"></p>
 
 
 
