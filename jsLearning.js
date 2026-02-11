@@ -719,14 +719,25 @@ function subscribeBtn() {
   }
 
 }
+
+
+function calculateTotal () {
+  const inputAmount = document.querySelector(`.js-input-amount`);
+  let cost = Number(inputAmount.value); 
+
+
+  if (cost < 40) {
+    cost += 10;
+  }
+
+  document.querySelector(`.js-calculation`).innerHTML = `$${cost}`;
+
+
+}
+
 */
 
-
-
-
-
-
-
+// done till 6:32:50
 
 
 
