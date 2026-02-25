@@ -127,7 +127,7 @@ function quizAnswer(selectedValue) {
 // mini shopping cart
 
 function calculateCart(){
-product1 = {
+const product1 = {
     price: 10,
     quantity: Number(document.querySelector(".product1-quantity").value) || 1,
 }
@@ -135,7 +135,7 @@ let product1Cost = `total for product 1: ` +  product1.price * product1.quantity
 
 document.querySelector(".product1-price").innerHTML = product1Cost;
 
-product2 = {
+const product2 = {
     price: 20,
     quantity: Number(document.querySelector(".product2-quantity").value) || 1,
 }
@@ -143,7 +143,7 @@ let product2Cost = `total for product 2: ` +  product2.price * product2.quantity
 
 document.querySelector(".product2-price").innerHTML = product2Cost;
 
-product3 = {
+const product3 = {
     price: 30,
     quantity: Number(document.querySelector(".product3-quantity").value) || 1,
 }
