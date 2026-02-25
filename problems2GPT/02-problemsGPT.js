@@ -12,8 +12,9 @@ function dynamicUsername() {
 function ageChecker(){
 const age = document.querySelector(".input-age");
 const ageChecker = document.querySelector(".age-checker");
+const ageValue = Number(age.value);
 
-    if (age.value >= 18) {
+    if (ageValue >= 18) {
         ageChecker.innerHTML = `Adult`;
     } else {
         ageChecker.innerHTML = `minor`;
@@ -31,8 +32,8 @@ document.title = `js problems2`;
 
 function calculate() {
 
-const num1 = document.querySelector(".num1").value;
-const num2 = document.querySelector(".num2").value;
+const num1 = Number(document.querySelector(".num1").value);
+const num2 = Number(document.querySelector(".num2").value);
 
 let result = document.querySelector(".result");
 
@@ -48,8 +49,8 @@ result.innerHTML = `sum: ${sum}, difference: ${difference}, product: ${product},
 
 // number comparison
 
-let comparsionNum1 = document.querySelector(".comparisonNum1").value;
-let comparisonNum2 = document.querySelector(".comparisonNum2").value;
+let comparsionNum1 = Number(document.querySelector(".comparisonNum1").value);
+let comparisonNum2 = Number(document.querySelector(".comparisonNum2").value);
 
 const numComparison = document.querySelector(".num-comparison");
 
@@ -81,7 +82,7 @@ function totalcost() {
 const product = {
     name: `basketball`,
     price: 30,
-    quantity: 0 || document.querySelector(".quantity").value,
+    quantity: Number(document.querySelector(".quantity").value) || 0,
 }
 
 const total = document.querySelector(".total-value");
@@ -95,29 +96,19 @@ total.innerHTML = `price: ${totalPrice}rs`;
 // mini quiz 
 
 
-function quizAnswer() {
- 
-    let option1 = document.querySelector(".option1");
-    let option2 = document.querySelector(".option2");
-    let option3 = document.querySelector(".option3");
-    let option4 = document.querySelector(".option4");
-    option1.value = 1;
-    option2.value = 4;
-    option3.value = 6;
-    option4.value = 8;
+function quizAnswer(selectedValue) {
 
+    const answer = document.querySelector(".answer");
 
-    let quizAnswer = document.querySelector(".answer");
-
-    if (option3.value === 6) {
-        quizAnswer.innerHTML = `correct answer!`;
-    } else if(option1.value === 1) {
-        quizAnswer.innerHTML = `wrong answer`;
+    if (selectedValue === 6) {
+        answer.innerHTML = "Correct!";
+    } else {
+        answer.innerHTML = "wrong!";
     }
 
-    console.log(option1.value);
 
 }
+
 
 
 
@@ -134,7 +125,7 @@ function quizAnswer() {
 
 product1 = {
     price: 10,
-    quantity: document.querySelector(".product1-quantity").value || 1,
+    quantity: Number(document.querySelector(".product1-quantity").value) || 1,
 }
 let product1Cost = `total for product 1: ` +  product1.price * product1.quantity + `rs`;
 
@@ -142,7 +133,7 @@ document.querySelector(".product1-price").innerHTML = product1Cost;
 
 product2 = {
     price: 20,
-    quantity: document.querySelector(".product2-quantity").value || 1,
+    quantity: Number(document.querySelector(".product2-quantity").value) || 1,
 }
 let product2Cost = `total for product 2: ` +  product2.price * product2.quantity + `rs`;
 
@@ -150,7 +141,7 @@ document.querySelector(".product2-price").innerHTML = product2Cost;
 
 product3 = {
     price: 30,
-    quantity: document.querySelector(".product3-quantity").value || 1,
+    quantity: Number(document.querySelector(".product3-quantity").value) || 1,
 }
 let product3Cost = `total for product 3: ` +  product3.price * product3.quantity + `rs`;
 document.querySelector(".product3-price").innerHTML = product3Cost;
