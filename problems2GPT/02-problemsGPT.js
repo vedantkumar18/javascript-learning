@@ -49,6 +49,7 @@ result.innerHTML = `sum: ${sum}, difference: ${difference}, product: ${product},
 
 // number comparison
 
+function compareNumbers() {
 let comparsionNum1 = Number(document.querySelector(".comparisonNum1").value);
 let comparisonNum2 = Number(document.querySelector(".comparisonNum2").value);
 
@@ -73,6 +74,8 @@ if (comparsionNum1 > comparisonNum2) {
 
 
 numComparison.innerHTML = `difference: ${comparisonDifference}, is equal? : ${comparisonEqual}, which is larger? : ${numGreaterThan}`;
+
+}
 
 // question for this, is why is number 5 considered larger than number 10? if num1 is 10 and num2 is 5
 
@@ -123,6 +126,7 @@ function quizAnswer(selectedValue) {
 
 // mini shopping cart
 
+function calculateCart(){
 product1 = {
     price: 10,
     quantity: Number(document.querySelector(".product1-quantity").value) || 1,
@@ -148,7 +152,11 @@ document.querySelector(".product3-price").innerHTML = product3Cost;
 
 let grandtotal = document.querySelector(".grand-Total");
 
-grandtotal.innerHTML = `grandtotal: ${(product3.price * product3.quantity) + (product2.price * product2.quantity) + (product1.price * product1.quantity)}`;
+grandtotal.innerHTML = `grandtotal:${
+    (product3.price * product3.quantity) 
+    + (product2.price * product2.quantity) 
+    + (product1.price * product1.quantity)}`;
+}
 
 
 
