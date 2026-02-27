@@ -735,9 +735,18 @@ function calculateTotal () {
 
 }
 
-*/
+function handleCostKeyDown(event) {
+      console.log(event.key);
+    if (event.key === `Enter`) {
+      calculateTotal();
+    }
+}
 
-// done till 6:32:50
+String(25) //converts a value to string. 
+console.log('25' - 5); // not recommended
+console.log(`25` + 5); // 225
+
+*/
 
 
 
