@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jsLearning.css">
+  <title>DOM</title>
+</head>
+<body>
+
+<button>9a</button>
+<button onclick="
+btn9b();
+">9b</button>
+<p class="btnClickText"></p>
+
+<hr>
+
+<button onclick="
+headOrTails(`heads`);
+">heads</button>
+
+<button onclick="
+headOrTails(`tails`);
+">tails</button>
+
+<p class="HT"></p>
+
+<hr>
+
+
+<input type="text" placeholder="Name" class="input-name" onkeydown="
+dynamicDisplayName(event);
+">
+
+<button onclick="
+displayName();
+">Submit</button>
+
+
+
+<p class="display-input-name"></p>
+
+<hr>
+
+<input type="text" placeholder="Type something" class="responsive-text" onkeyup="
+onKeyUp();
+">
+<p class="responsive-text-display"></p>
+
+
+
+
+  <script src="jsLearning.js"></script>
+</body>
+</html>
