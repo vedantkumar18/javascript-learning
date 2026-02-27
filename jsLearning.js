@@ -404,26 +404,46 @@ if (from !== `km` && from !== `mile` && from !== `ft`){
 
 
 // 07-calculator-copy
+
+
+
+
+// removed the local storage entirely because it was getting annoying..
+
+
+/*
+let calculation = localStorage.getItem(`calculation`) || ``;
+*/
+
 /*
 
-let calculation = localStorage.getItem(`calculation`) || ``;
-
+let calculation = '';
 
 document.getElementById('display').innerText =
   calculation || '(empty on load)';
 
 function updateCalculation(number) {
   console.log(calculation += number);
-  localStorage.setItem(`calculation`, calculation);
+  document.getElementById('display').innerText =
+  calculation;
+  // localStorage.setItem(`calculation`, calculation);
 }
 
 // 3. Function to calculate result
 function calculateResult() {
   calculation = eval(calculation);       // evaluate expression
   console.log(calculation);
-  localStorage.setItem('calculation', calculation); // save result
+  document.getElementById('display').innerText =
+  calculation;
+  
+  
+//  localStorage.setItem('calculation', calculation); // save result
 }
+
+
+// also the code works fine without the local storage for now, so thats good. (if need be then i can easily allow the local storage).
 */
+
 
 
 // 07-cart quantity
