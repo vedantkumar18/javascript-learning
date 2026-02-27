@@ -432,6 +432,10 @@ function calculateResult() {
 
 let cartQuantity = 0;
 
+let displayCartQuantity = document.querySelector(".cart-quantity-display");
+
+displayCartQuantity.innerHTML = `cart quantity: ${cartQuantity}`;
+
 function updateCartQuantity(number){
 
     if (cartQuantity + number > 10) {
@@ -439,10 +443,15 @@ function updateCartQuantity(number){
       return;
     } else {
       cartQuantity += number;
-    console.log(`cart Quantity: ${cartQuantity}`); 
+      console.log(`cart Quantity: ${cartQuantity}`); 
+      displayCartQuantity.innerHTML = `cart quantity: ${cartQuantity}`;
     }
 
-}
+
+
+  }
+
+
 
 function removeCartQuantity(number) {
 
@@ -451,10 +460,10 @@ function removeCartQuantity(number) {
     } else {
       cartQuantity -= number;
     console.log(`cart Quantity: ${cartQuantity}`); 
-    }
+    displayCartQuantity.innerHTML = `cart quantity: ${cartQuantity}`;
+  }
 
 }
-  
 */
 
 // lesson 8
