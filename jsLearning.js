@@ -725,10 +725,19 @@ function calculateTotal () {
   const inputAmount = document.querySelector(`.js-input-amount`);
   let cost = Number(inputAmount.value); 
 
+console.log(cost);
 
   if (cost < 40) {
-    cost += 10;
+    cost = cost * 100;
+    cost = (cost + 1000) / 100 ;
+  } else if (cost >= 40) {
+    cost;
   }
+
+
+  console.log(cost);
+
+
 
   document.querySelector(`.js-calculation`).innerHTML = `$${cost}`;
 
@@ -746,21 +755,63 @@ String(25) //converts a value to string.
 console.log('25' - 5); // not recommended
 console.log(`25` + 5); // 225
 
+
+
+// DOM Problems
+
+console.log(document.querySelector('button'));
+
+function btn9b(){
+
+
+document.querySelector(`.btnClickText`).innerHTML = `9b done!`;
+
+console.log(`9b done!`);
+
+}
+
+function headOrTails(chosen) {
+
+
+
+  if ( chosen === `heads`) {
+    document.querySelector(".HT").innerHTML = `you chose: heads`;
+  }else if (chosen === `tails`) {
+    document.querySelector(".HT").innerHTML = `you chose: tails`;
+  }
+
+
+}
+
+
+
+function displayName() {
+  const inputName = document.querySelector(".input-name").value;
+  console.log(inputName);
+  let displayInputName = document.querySelector(".display-input-name");
+  displayInputName.innerHTML = `Your name is: ${inputName}`;
+
+}
+
+function dynamicDisplayName(event) {
+  console.log(event.key);
+  if (event.key === 'Enter') {
+    displayName();
+  }
+}
+
+function onKeyUp(){
+
+let responsiveTextInput = document.querySelector(".responsive-text").value;
+
+let responsiveTextDisplay = document.querySelector(".responsive-text-display");
+
+
+responsiveTextDisplay.innerHTML = responsiveTextInput;
+
+}
+
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
